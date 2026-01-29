@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akhilesh Datta | Aspiring Software Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #818cf8 0%, #c084fc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .no-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+    </style>
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-[#0a0a0c]/80', 'backdrop-blur-md', 'py-4', 'border-b', 'border-white/10');
+                nav.classList.remove('bg-transparent', 'py-6');
+            } else {
+                nav.classList.remove('bg-[#0a0a0c]/80', 'backdrop-blur-md', 'py-4', 'border-b', 'border-white/10');
+                nav.classList.add('bg-transparent', 'py-6');
+            }
+        });
+    </script>
+</head>
+<body class="bg-[#0a0a0c] text-slate-200 antialiased overflow-x-hidden">
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent py-6">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold tracking-tighter hover:opacity-80 transition-opacity">
+                AKHILESH<span class="text-indigo-400">.</span>
+            </a>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="#about" class="text-sm font-medium text-slate-400 hover:text-white transition-colors">About</a>
+                <a href="#skills" class="text-sm font-medium text-slate-400 hover:text-white transition-colors">Skills</a>
+                <a href="#projects" class="text-sm font-medium text-slate-400 hover:text-white transition-colors">Projects</a>
+                <a href="#certifications" class="text-sm font-medium text-slate-400 hover:text-white transition-colors">Certifications</a>
+                <a href="#contact" class="text-sm font-medium text-slate-400 hover:text-white transition-colors">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <i class="fa-solid fa-bars text-xl cursor-pointer"></i>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <!-- Hero -->
+        <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 px-6">
+            <!-- Background blobs -->
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-indigo-600/20 rounded-full blur-[120px] -z-10 animate-pulse"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-600/10 rounded-full blur-[120px] -z-10 animate-pulse delay-1000"></div>
+    
+            <div class="max-w-4xl w-full text-center">
+                <div class="inline-block px-4 py-1.5 mb-6 rounded-full glass border border-white/10 text-indigo-300 text-xs font-semibold tracking-wider uppercase animate-bounce">
+                    Open to Internships 2025
+                </div>
+                
+                <h1 class="text-5xl md:text-8xl font-black mb-6 tracking-tight">
+                    Hi, I'm <span class="gradient-text">Akhilesh</span>
+                </h1>
+                
+                <p class="text-xl md:text-2xl text-slate-400 font-medium mb-10 max-w-2xl mx-auto leading-relaxed">
+                    Final Year Diploma Student in Computer Science — Open to Internships
+                </p>
+    
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="#projects" class="w-full sm:w-auto px-8 py-4 bg-white text-black font-bold rounded-xl hover:bg-slate-200 transition-all transform hover:-translate-y-1">
+                        View My Work
+                    </a>
+                    <a href="#contact" class="w-full sm:w-auto px-8 py-4 glass text-white font-bold rounded-xl hover:bg-white/5 transition-all transform hover:-translate-y-1">
+                        Get In Touch
+                    </a>
+                </div>
+    
+                <div class="mt-20 flex justify-center gap-8">
+                    <a href="https://github.com/a777r1" target="_blank" class="text-2xl text-slate-500 hover:text-white transition-colors">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/Akhilesh-datta" target="_blank" class="text-2xl text-slate-500 hover:text-white transition-colors">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:akd9655@gmail.com" class="text-2xl text-slate-500 hover:text-white transition-colors">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- About Section (Intro from App.tsx) -->
+        <section id="about" class="py-24 px-6 max-w-7xl mx-auto border-t border-white/5">
+            <div class="max-w-3xl">
+                <h2 class="text-indigo-400 font-bold uppercase tracking-widest text-xs mb-4">A Little Bit About Me</h2>
+                <p class="text-2xl md:text-3xl font-medium leading-snug text-slate-300">
+                    I'm a final-year Computer Science student passionate about 
+                    <span class="text-white"> software development</span> and 
+                    <span class="text-white"> problem-solving</span>. I enjoy turning complex problems into simple, beautiful, and intuitive designs.
+                </p>
+            </div>
+        </section>
+        <!-- Skills -->
+        <section id="skills" class="py-24 px-6 max-w-7xl mx-auto">
+            <div class="mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Technical <span class="text-indigo-400">Toolkit</span></h2>
+                <div class="w-20 h-1.5 bg-indigo-500 rounded-full"></div>
+            </div>
+    
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Programming Languages -->
+                <div class="glass p-8 rounded-3xl hover:border-white/20 transition-colors group">
+                    <h3 class="text-lg font-bold text-slate-400 mb-6 group-hover:text-white transition-colors">Programming Languages</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-4 py-2 bg-indigo-500/10 text-indigo-300 text-sm font-medium rounded-xl border border-indigo-500/20">Python</span>
+                        <span class="px-4 py-2 bg-indigo-500/10 text-indigo-300 text-sm font-medium rounded-xl border border-indigo-500/20">Java</span>
+                        <span class="px-4 py-2 bg-indigo-500/10 text-indigo-300 text-sm font-medium rounded-xl border border-indigo-500/20">C</span>
+                        <span class="px-4 py-2 bg-indigo-500/10 text-indigo-300 text-sm font-medium rounded-xl border border-indigo-500/20">C++</span>
+                        <span class="px-4 py-2 bg-indigo-500/10 text-indigo-300 text-sm font-medium rounded-xl border border-indigo-500/20">JavaScript</span>
+                        <span class="px-4 py-2 bg-indigo-500/10 text-indigo-300 text-sm font-medium rounded-xl border border-indigo-500/20">TypeScript</span>
+                    </div>
+                </div>
+                <!-- Web Technologies -->
+                <div class="glass p-8 rounded-3xl hover:border-white/20 transition-colors group">
+                    <h3 class="text-lg font-bold text-slate-400 mb-6 group-hover:text-white transition-colors">Web Technologies</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-4 py-2 bg-indigo-500/10 text-indigo-300 text-sm font-medium rounded-xl border border-indigo-500/20">HTML</span>
+                        <span class="px-4 py-2 bg-indigo-500/10 text-indigo-300 text-sm font-medium rounded-xl border border-indigo-500/20">CSS</span>
+                        <span class="px-4 py-2 bg-indigo-500/10 text-indigo-300 text-sm font-medium rounded-xl border border-indigo-500/20">JavaScript</span>
+                        <span class="px-4 py-2 bg-indigo-500/10 text-indigo-300 text-sm font-medium rounded-xl border border-indigo-500/20">React (Basic)</span>
+                    </div>
+                </div>
+                <!-- Databases -->
+                <div class="glass p-8 rounded-3xl hover:border-white/20 transition-colors group">
+                    <h3 class="text-lg font-bold text-slate-400 mb-6 group-hover:text-white transition-colors">Databases</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-4 py-2 bg-indigo-500/10 text-indigo-300 text-sm font-medium rounded-xl border border-indigo-500/20">MySQL</span>
+                        <span class="px-4 py-2 bg-indigo-500/10 text-indigo-300 text-sm font-medium rounded-xl border border-indigo-500/20">SQL</span>
+                        <span class="px-4 py-2 bg-indigo-500/10 text-indigo-300 text-sm font-medium rounded-xl border border-indigo-500/20">DBMS Concepts</span>
+                    </div>
+                </div>
+                <!-- Tools & Platforms -->
+                <div class="glass p-8 rounded-3xl hover:border-white/20 transition-colors group">
+                    <h3 class="text-lg font-bold text-slate-400 mb-6 group-hover:text-white transition-colors">Tools & Platforms</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-4 py-2 bg-indigo-500/10 text-indigo-300 text-sm font-medium rounded-xl border border-indigo-500/20">Git</span>
+                        <span class="px-4 py-2 bg-indigo-500/10 text-indigo-300 text-sm font-medium rounded-xl border border-indigo-500/20">GitHub</span>
+                        <span class="px-4 py-2 bg-indigo-500/10 text-indigo-300 text-sm font-medium rounded-xl border border-indigo-500/20">VS Code</span>
+                        <span class="px-4 py-2 bg-indigo-500/10 text-indigo-300 text-sm font-medium rounded-xl border border-indigo-500/20">Spyder</span>
+                        <span class="px-4 py-2 bg-indigo-500/10 text-indigo-300 text-sm font-medium rounded-xl border border-indigo-500/20">GitHub Pages</span>
+                    </div>
+                </div>
+                <!-- Operating Systems -->
+                <div class="glass p-8 rounded-3xl hover:border-white/20 transition-colors group">
+                    <h3 class="text-lg font-bold text-slate-400 mb-6 group-hover:text-white transition-colors">Operating Systems</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-4 py-2 bg-indigo-500/10 text-indigo-300 text-sm font-medium rounded-xl border border-indigo-500/20">Windows</span>
+                        <span class="px-4 py-2 bg-indigo-500/10 text-indigo-300 text-sm font-medium rounded-xl border border-indigo-500/20">Linux (Basic Commands)</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Projects -->
+        <section id="projects" class="py-24 px-6 bg-white/[0.02]">
+            <div class="max-w-7xl mx-auto">
+                <div class="mb-16 text-center">
+                    <h2 class="text-3xl md:text-5xl font-black mb-4">Featured <span class="text-indigo-400">Projects</span></h2>
+                    <p class="text-slate-400 max-w-xl mx-auto">Selected works that showcase my programming fundamentals and passion for building functional tools.</p>
+                </div>
+        
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Project 1 -->
+                    <div class="glass overflow-hidden rounded-[2rem] border border-white/5 hover:border-indigo-500/30 transition-all group flex flex-col h-full">
+                        <div class="p-8 md:p-12 flex flex-col h-full">
+                            <div class="flex justify-between items-start mb-6">
+                                <div class="flex gap-2">
+                                    <span class="text-[10px] font-bold tracking-widest uppercase text-indigo-400">React</span>
+                                    <span class="text-[10px] font-bold tracking-widest uppercase text-indigo-400">Tailwind</span>
+                                    <span class="text-[10px] font-bold tracking-widest uppercase text-indigo-400">UI/UX</span>
+                                </div>
+                                <a href="https://studyflowai.github.io" target="_blank" class="text-xl hover:text-indigo-400 transition-colors">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </div>
+                            
+                            <h3 class="text-2xl md:text-3xl font-bold mb-6 group-hover:text-indigo-300 transition-colors">
+                                AI-Powered Portfolio Website
+                            </h3>
+    
+                            <ul class="space-y-4 mb-8 flex-grow">
+                                <li class="text-slate-400 flex items-start gap-3 text-sm md:text-base">
+                                    <span class="mt-1.5 w-1.5 h-1.5 bg-indigo-500 rounded-full flex-shrink-0"></span>
+                                    Designed and developed a responsive portfolio website using HTML, CSS, JavaScript, and React.
+                                </li>
+                                <li class="text-slate-400 flex items-start gap-3 text-sm md:text-base">
+                                    <span class="mt-1.5 w-1.5 h-1.5 bg-indigo-500 rounded-full flex-shrink-0"></span>
+                                    Improved usability by modifying and refactoring AI-generated layouts.
+                                </li>
+                                <li class="text-slate-400 flex items-start gap-3 text-sm md:text-base">
+                                    <span class="mt-1.5 w-1.5 h-1.5 bg-indigo-500 rounded-full flex-shrink-0"></span>
+                                    Deployed the application using GitHub Pages.
+                                </li>
+                            </ul>
+    
+                            <a href="https://studyflowai.github.io" class="inline-flex items-center text-sm font-bold text-white group-hover:gap-3 gap-2 transition-all">
+                                View Project Repo <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="glass overflow-hidden rounded-[2rem] border border-white/5 hover:border-indigo-500/30 transition-all group flex flex-col h-full">
+                        <div class="p-8 md:p-12 flex flex-col h-full">
+                            <div class="flex justify-between items-start mb-6">
+                                <div class="flex gap-2">
+                                    <span class="text-[10px] font-bold tracking-widest uppercase text-indigo-400">Python</span>
+                                    <span class="text-[10px] font-bold tracking-widest uppercase text-indigo-400">OOP</span>
+                                    <span class="text-[10px] font-bold tracking-widest uppercase text-indigo-400">File Handling</span>
+                                </div>
+                                <a href="https://github.com/a777r1/StudentResult" target="_blank" class="text-xl hover:text-indigo-400 transition-colors">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </div>
+                            
+                            <h3 class="text-2xl md:text-3xl font-bold mb-6 group-hover:text-indigo-300 transition-colors">
+                                Student Result Management System
+                            </h3>
+    
+                            <ul class="space-y-4 mb-8 flex-grow">
+                                <li class="text-slate-400 flex items-start gap-3 text-sm md:text-base">
+                                    <span class="mt-1.5 w-1.5 h-1.5 bg-indigo-500 rounded-full flex-shrink-0"></span>
+                                    Developed a Python-based application using object-oriented programming principles.
+                                </li>
+                                <li class="text-slate-400 flex items-start gap-3 text-sm md:text-base">
+                                    <span class="mt-1.5 w-1.5 h-1.5 bg-indigo-500 rounded-full flex-shrink-0"></span>
+                                    Implemented student data input, grade calculation logic, and file-based data persistence.
+                                </li>
+                                <li class="text-slate-400 flex items-start gap-3 text-sm md:text-base">
+                                    <span class="mt-1.5 w-1.5 h-1.5 bg-indigo-500 rounded-full flex-shrink-0"></span>
+                                    Strengthened understanding of Python fundamentals and clean coding practices.
+                                </li>
+                            </ul>
+    
+                            <a href="https://github.com/a777r1/StudentResult" class="inline-flex items-center text-sm font-bold text-white group-hover:gap-3 gap-2 transition-all">
+                                View Project Repo <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Experience & Strengths -->
+        <section id="education" class="py-24 px-6 max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <!-- Education -->
+                <div>
+                    <div class="mb-12">
+                        <h2 class="text-3xl font-bold mb-4">Academic <span class="text-indigo-400">Journey</span></h2>
+                        <div class="w-16 h-1 bg-indigo-500 rounded-full"></div>
+                    </div>
+                    
+                    <div class="space-y-8 relative">
+                        <div class="absolute left-4 top-0 bottom-0 w-px bg-white/10"></div>
+                        <!-- Edu 1 -->
+                        <div class="relative pl-12 group">
+                            <div class="absolute left-[11px] top-1.5 w-[10px] h-[10px] rounded-full bg-indigo-500 ring-4 ring-indigo-500/20 group-hover:scale-125 transition-transform"></div>
+                            <span class="text-xs font-bold text-indigo-400 mb-2 block">Jan 2023 – Dec 2026</span>
+                            <h4 class="text-xl font-bold mb-1">Diploma in Computer Science & Engineering</h4>
+                            <p class="text-slate-300 font-medium">Acharya Polytechnic</p>
+                            <p class="text-slate-500 text-sm mt-1">Bengaluru, India</p>
+                        </div>
+                        <!-- Edu 2 -->
+                        <div class="relative pl-12 group">
+                            <div class="absolute left-[11px] top-1.5 w-[10px] h-[10px] rounded-full bg-indigo-500 ring-4 ring-indigo-500/20 group-hover:scale-125 transition-transform"></div>
+                            <span class="text-xs font-bold text-indigo-400 mb-2 block">Jan 2022 – Dec 2023</span>
+                            <h4 class="text-xl font-bold mb-1">Secondary Education</h4>
+                            <p class="text-slate-300 font-medium">Orchids International School</p>
+                            <p class="text-slate-500 text-sm mt-1">Bengaluru, India</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Strengths -->
+                <div>
+                    <div class="mb-12">
+                        <h2 class="text-3xl font-bold mb-4">Core <span class="text-indigo-400">Strengths</span></h2>
+                        <div class="w-16 h-1 bg-indigo-500 rounded-full"></div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="glass p-6 rounded-2xl flex items-start gap-4 hover:bg-white/[0.05] transition-colors">
+                            <div class="w-10 h-10 rounded-xl bg-indigo-500/10 flex items-center justify-center text-indigo-400 flex-shrink-0"><i class="fa-solid fa-check"></i></div>
+                            <p class="text-sm font-medium leading-relaxed">Strong problem-solving and analytical thinking</p>
+                        </div>
+                        <div class="glass p-6 rounded-2xl flex items-start gap-4 hover:bg-white/[0.05] transition-colors">
+                            <div class="w-10 h-10 rounded-xl bg-indigo-500/10 flex items-center justify-center text-indigo-400 flex-shrink-0"><i class="fa-solid fa-check"></i></div>
+                            <p class="text-sm font-medium leading-relaxed">Ability to understand and improve existing codebases</p>
+                        </div>
+                        <div class="glass p-6 rounded-2xl flex items-start gap-4 hover:bg-white/[0.05] transition-colors">
+                            <div class="w-10 h-10 rounded-xl bg-indigo-500/10 flex items-center justify-center text-indigo-400 flex-shrink-0"><i class="fa-solid fa-check"></i></div>
+                            <p class="text-sm font-medium leading-relaxed">Quick learner with adaptability to new technologies</p>
+                        </div>
+                        <div class="glass p-6 rounded-2xl flex items-start gap-4 hover:bg-white/[0.05] transition-colors">
+                            <div class="w-10 h-10 rounded-xl bg-indigo-500/10 flex items-center justify-center text-indigo-400 flex-shrink-0"><i class="fa-solid fa-check"></i></div>
+                            <p class="text-sm font-medium leading-relaxed">Effective communication and teamwork skills</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Certifications -->
+        <section id="certifications" class="py-24 px-6 bg-indigo-600/[0.02]">
+            <div class="max-w-7xl mx-auto">
+                <div class="mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Learning & <span class="text-indigo-400">Certs</span></h2>
+                    <div class="w-20 h-1.5 bg-indigo-500 rounded-full"></div>
+                </div>
+        
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Cert 1 -->
+                    <div class="glass p-6 rounded-[1.5rem] flex flex-col justify-between group hover:border-white/20 transition-all">
+                        <div>
+                            <div class="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center text-xl text-indigo-400 mb-6 group-hover:scale-110 transition-transform"><i class="fa-solid fa-certificate"></i></div>
+                            <h3 class="font-bold text-lg mb-2 leading-tight">Python for Data Science, AI & Development</h3>
+                        </div>
+                        <p class="text-xs font-bold text-slate-500 uppercase tracking-widest mt-4">Achieved: Oct 2024</p>
+                    </div>
+                    <!-- Cert 2 -->
+                    <div class="glass p-6 rounded-[1.5rem] flex flex-col justify-between group hover:border-white/20 transition-all">
+                        <div>
+                            <div class="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center text-xl text-indigo-400 mb-6 group-hover:scale-110 transition-transform"><i class="fa-solid fa-certificate"></i></div>
+                            <h3 class="font-bold text-lg mb-2 leading-tight">Bitcoin for Developers</h3>
+                        </div>
+                        <p class="text-xs font-bold text-slate-500 uppercase tracking-widest mt-4">Achieved: Oct 2025</p>
+                    </div>
+                    <!-- Cert 3 -->
+                    <div class="glass p-6 rounded-[1.5rem] flex flex-col justify-between group hover:border-white/20 transition-all">
+                        <div>
+                            <div class="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center text-xl text-indigo-400 mb-6 group-hover:scale-110 transition-transform"><i class="fa-solid fa-certificate"></i></div>
+                            <h3 class="font-bold text-lg mb-2 leading-tight">Getting Started with Microsoft Excel</h3>
+                        </div>
+                        <p class="text-xs font-bold text-slate-500 uppercase tracking-widest mt-4">Achieved: Nov 2025</p>
+                    </div>
+                    <!-- Cert 4 -->
+                    <div class="glass p-6 rounded-[1.5rem] flex flex-col justify-between group hover:border-white/20 transition-all">
+                        <div>
+                            <div class="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center text-xl text-indigo-400 mb-6 group-hover:scale-110 transition-transform"><i class="fa-solid fa-certificate"></i></div>
+                            <h3 class="font-bold text-lg mb-2 leading-tight">Build a Free Website with WordPress</h3>
+                        </div>
+                        <p class="text-xs font-bold text-slate-500 uppercase tracking-widest mt-4">Achieved: Nov 2025</p>
+                    </div>
+                    <!-- Cert 5 -->
+                    <div class="glass p-6 rounded-[1.5rem] flex flex-col justify-between group hover:border-white/20 transition-all">
+                        <div>
+                            <div class="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center text-xl text-indigo-400 mb-6 group-hover:scale-110 transition-transform"><i class="fa-solid fa-certificate"></i></div>
+                            <h3 class="font-bold text-lg mb-2 leading-tight">Build a Computer Vision App with Azure Cognitive Services</h3>
+                        </div>
+                        <p class="text-xs font-bold text-slate-500 uppercase tracking-widest mt-4">Achieved: Nov 2025</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact -->
+        <section id="contact" class="py-24 px-6 max-w-7xl mx-auto">
+            <div class="glass rounded-[3rem] overflow-hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-2">
+                    <div class="p-10 md:p-20 bg-white/5 border-r border-white/5">
+                        <h2 class="text-4xl md:text-6xl font-black mb-8 leading-tight">
+                            Let's build <br/> something <span class="gradient-text">great</span>.
+                        </h2>
+                        <p class="text-slate-400 text-lg mb-12 max-w-md">
+                            I'm currently seeking internship opportunities where I can apply my Python and Web development skills to real-world problems.
+                        </p>
+                        
+                        <div class="space-y-6">
+                            <a href="mailto:akd9655@gmail.com" class="flex items-center gap-6 group">
+                                <div class="w-14 h-14 rounded-2xl glass flex items-center justify-center text-xl text-indigo-400 group-hover:bg-indigo-600 group-hover:text-white transition-all">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-bold text-slate-500 uppercase">Email Me</p>
+                                    <p class="text-xl font-bold">akd9655@gmail.com</p>
+                                </div>
+                            </a>
+                            <a href="tel:9686732007" class="flex items-center gap-6 group">
+                                <div class="w-14 h-14 rounded-2xl glass flex items-center justify-center text-xl text-indigo-400 group-hover:bg-indigo-600 group-hover:text-white transition-all">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-bold text-slate-500 uppercase">Call Me</p>
+                                    <p class="text-xl font-bold">9686732007</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+        
+                    <div class="p-10 md:p-20 flex flex-col justify-center bg-indigo-600/[0.03]">
+                        <h3 class="text-2xl font-bold mb-10">Social Connections</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <a href="https://github.com/a777r1" target="_blank" class="p-8 glass rounded-3xl text-center hover:scale-105 transition-all">
+                                <i class="fa-brands fa-github text-4xl mb-4 text-white"></i>
+                                <p class="font-bold">GitHub</p>
+                                <p class="text-xs text-slate-500 mt-2">Check my repos</p>
+                            </a>
+                            <a href="https://linkedin.com/in/Akhilesh-datta" target="_blank" class="p-8 glass rounded-3xl text-center hover:scale-105 transition-all">
+                                <i class="fa-brands fa-linkedin text-4xl mb-4 text-indigo-400"></i>
+                                <p class="font-bold">LinkedIn</p>
+                                <p class="text-xs text-slate-500 mt-2">Connect professionaly</p>
+                            </a>
+                        </div>
+                        
+                        <div class="mt-12 p-8 glass rounded-3xl border-dashed border-white/20 text-center">
+                            <p class="text-slate-400 italic">"Technology is best when it brings people together."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <footer class="mt-20 text-center text-slate-500 text-sm">
+                <!-- Simple vanilla JS to update year -->
+                <p>&copy; <span id="year"></span> Akhilesh Datta. Built with HTML, Tailwind CSS.</p>
+                <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+            </footer>
+        </section>
+    </main>
+</body>
+</html>
